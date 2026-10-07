@@ -2,6 +2,9 @@
 
 This project is a single-file Galaga-lite clone using **Pygame**. It introduces students to Bézier-curve motion, wave-based enemy spawning, and projectile collision using a small, readable object-oriented codebase.
 
+# Link to the AI chat
+## https://claude.ai/share/6e7fec60-9886-44b1-a53a-68f55e15dff4
+
 ---
 
 ## What's Provided
