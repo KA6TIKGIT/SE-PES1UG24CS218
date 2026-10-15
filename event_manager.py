@@ -1,6 +1,6 @@
 import json
 import secrets
-import subprocess  # nosec B404 - used only with a fixed argument list, no shell
+import subprocess  # nosec B404 - used only with a fixed argument list
 from datetime import date
 
 events = {}
@@ -59,7 +59,7 @@ def printBadges(eventName):
 
 def main():
     createEvent("Tech Meetup", "Hall A", 3)
-    createEvent("Alumni Dinner", "Rooftop",2)
+    createEvent("Alumni Dinner", "Rooftop", 2)
     registerGuest("Tech Meetup", "Asha")
     registerGuest("Tech Meetup", "Ravi")
     registerGuest("Alumni Dinner", "Meena")
