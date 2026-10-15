@@ -1,6 +1,6 @@
-import os
-import pickle
-import random
+import json
+import secrets
+import subprocess  # nosec B404 - used only with a fixed argument list, no shell
 from datetime import date
 
 events = {}
