@@ -64,7 +64,7 @@ def main():
     registerGuest("Tech Meetup", "Ravi")
     registerGuest("Alumni Dinner", "Meena")
     registerGuest("Workshop", "Kiran")
-    left=seatsLeft("Tech Meetup")
+    left = seatsLeft("Tech Meetup")
     print("Seats left at Tech Meetup:", left)
     print("Seats left at Alumni Dinner:", seatsLeft("Alumni Dinner"))
     print("Tech Meetup guests:", guestReport("Tech Meetup", "name"))
