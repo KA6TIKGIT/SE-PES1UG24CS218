@@ -79,4 +79,5 @@ def main():
     print("Events restored from file:", len(restored))
     print("Venues:", [e["venue"] for e in restored.values()])
 
+
 main()
