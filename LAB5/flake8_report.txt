@@ -1,0 +1,3 @@
+event_manager.py:5:80: E501 line too long (80 > 79 characters)
+event_manager.py:47:80: E501 line too long (80 > 79 characters)
+event_manager.py:96:11: W292 no newline at end of file

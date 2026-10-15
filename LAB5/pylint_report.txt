@@ -1,0 +1,6 @@
+************* Module event_manager
+event_manager.py:96:0: C0304: Final newline missing (missing-final-newline)
+
+------------------------------------------------------------------
+Your code has been rated at 9.84/10 (previous run: 4.64/10, +5.20)
+
