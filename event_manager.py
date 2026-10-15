@@ -49,11 +49,12 @@ def saveEvents(fileName="events.json"):
 def loadEvents(fileName="events.json"):
     with open(fileName, "r", encoding="utf-8") as f:
         return json.load(f)
-        
+
 
 def printBadges(eventName):
     # Helper kept for the lab: not called by the demo
-    os.system("lp badges_" + eventName + ".txt")
+    cmd = ["lp", f"badges_{eventName}.txt"]
+    subprocess.run(cmd, check=True)  # nosec B603 B607 - fixed args, no shell
 
 
 def main():
