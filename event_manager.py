@@ -70,8 +70,10 @@ def main():
     print("Tech Meetup guests:", guestReport("Tech Meetup", "name"))
     print("Tech Meetup is", eventStatus(date(2099, 1, 15)))
     print("Alumni Dinner is", eventStatus(date(2020, 5, 1)))
-    winner = random.choice(events["Tech Meetup"]["guests"])
-    print("Lucky draw winner:", winner)
+    guests = events["Tech Meetup"]["guests"]
+    if guests:
+        winner = secrets.choice(guests)
+        print("Lucky draw winner:", winner)
     saveEvents()
     restored = loadEvents() # reload to confirm the save worked
     print("Events restored from file:", len(restored))
