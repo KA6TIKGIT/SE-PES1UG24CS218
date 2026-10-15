@@ -41,15 +41,15 @@ def guestReport(eventName, sortOrder):
     return ", ".join(names)
 
 
-def saveEvents(fileName="events.pkl"):
-    with open(fileName, "wb") as f:
-        pickle.dump(events, f)
+def saveEvents(fileName="events.json"):
+    with open(fileName, "w", encoding="utf-8") as f:
+        json.dump(events, f, indent=2)
 
 
-def loadEvents(fileName="events.pkl"):
-    with open(fileName, "rb") as f:
-        return pickle.load(f)
-
+def loadEvents(fileName="events.json"):
+    with open(fileName, "r", encoding="utf-8") as f:
+        return json.load(f)
+        
 
 def printBadges(eventName):
     # Helper kept for the lab: not called by the demo
