@@ -75,7 +75,7 @@ def main():
         winner = secrets.choice(guests)
         print("Lucky draw winner:", winner)
     saveEvents()
-    restored = loadEvents() # reload to confirm the save worked
+    restored = loadEvents()  # reload to confirm the save worked
     print("Events restored from file:", len(restored))
     print("Venues:", [e["venue"] for e in restored.values()])
 
