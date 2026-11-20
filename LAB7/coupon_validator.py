@@ -1,14 +1,45 @@
 def split_code(code):
-    prefix, value = code.strip().upper().split('-')
-    return prefix, int(value)
+    try:
+        if not isinstance(code, str):
+            return None
+        code = code.strip()
+        parts = code.split('-')
+        if len(parts) != 2:
+            return None
+        prefix, value_str = parts[0].strip().upper(), parts[1].strip()
+        if not prefix or not value_str:
+            return None
+        value = int(value_str)
+        return prefix, value
+    except Exception:
+        return None
 
 def most_expensive(prices_csv):
-    prices = [float(p) for p in prices_csv.split(',')]
-    return max(prices)
+    try:
+        if not isinstance(prices_csv, str):
+            return None
+        raw_items = prices_csv.split(',')
+        items = [p.strip() for p in raw_items if p.strip()]
+        if not items:
+            return None
+        prices = [float(p) for p in items]
+        return max(prices)
+    except Exception:
+        return None
 
 def expiry_days(date_text):
-    year, month, day = [int(p) for p in date_text.split('-')]
-    return (year - 2024) * 365 + (month - 1) * 30 + day
+    try:
+        if not isinstance(date_text, str):
+            return None
+        parts = date_text.strip().split('-')
+        if len(parts) != 3:
+            return None
+        year, month, day = [int(p.strip()) for p in parts]
+        if not (1 <= month <= 12 and 1 <= day <= 31):
+            return None
+        return (year - 2024) * 365 + (month - 1) * 30 + day
+    except Exception:
+        return None
 
 def main():
     print("==== Running split_code ====")
